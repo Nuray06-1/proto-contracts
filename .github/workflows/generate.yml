@@ -41,7 +41,8 @@ jobs:
           TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git clone https://$TOKEN@github.com/Nuray06-1/proto-generated.git out
-          cp *.go out/
+          mkdir -p out/payment
+          cp *.go out/payment/
           cd out
           git config user.name "github-actions"
           git config user.email "actions@github.com"
