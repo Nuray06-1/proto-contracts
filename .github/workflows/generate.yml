@@ -29,7 +29,6 @@ jobs:
 
       - name: Generate code
         run: |
-          mkdir -p generated
           protoc \
             --go_out=. \
             --go-grpc_out=. \
