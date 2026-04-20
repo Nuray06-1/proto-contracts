@@ -42,7 +42,9 @@ jobs:
         run: |
           git clone https://$TOKEN@github.com/Nuray06-1/proto-generated.git out
           mkdir -p out/payment
-          cp *.go out/payment/
+          mkdir -p out/order
+          cp payment*.go out/payment/ || true
+          cp order*.go out/order/ || true
           cd out
           git config user.name "github-actions"
           git config user.email "actions@github.com"
